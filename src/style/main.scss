@@ -1,7 +1,16 @@
-@use 'abstract/fonts';
+@use "abstract/variables";
+@use "abstract/typography";
+@use "abstract/mixins";
+@use "abstract/placeholders";
 
+@use "base/fonts";
+@use "base/base";
+@use "base/helpers";
 
-.red {
-  color: red;
-  font-family: 'Pacifico';
-}
+@use "layout/layout";
+@use "layout/header";
+@use "layout/section";
+@use "layout/hero";
+@use "layout/about";
+
+@use "draft"

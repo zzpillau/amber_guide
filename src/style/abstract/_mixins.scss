@@ -1,0 +1,48 @@
+@use "sass:map";
+@use "sass:meta";
+
+
+@mixin font($size, $height, $weight: 400, $spacing: normal) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  letter-spacing: $spacing;
+  text-transform: uppercase;
+}
+
+// Breakpoints
+$breakpoints: (
+  'small': 380px,
+  'medium': 768px,
+  'large': 1440px,
+) !default;
+
+
+// @media
+
+@mixin media($max-bp, $min-bp: null) {
+  $max-w: if(meta.type-of($max-bp) == number, $max-bp, map.get($breakpoints, $max-bp));
+  $min-w: if($min-bp != null and meta.type-of($min-bp) == number, $min-bp, map.get($breakpoints, $min-bp));
+
+  @if $min-w {
+    @media all and (max-width: #{$max-w}) and (min-width: #{$min-w}) {
+      @content;
+    };
+  } @else {
+    @media all and (max-width: #{$max-w}) {
+      @content;
+    }; 
+  }
+};
+
+// disable-hover-on-mobile 
+
+@mixin disable-hover-on-mobile {
+  @media only screen and (max-width: calc(map.get($breakpoints, 'medium'))) {
+    cursor: default !important;
+
+      &:hover {
+        @content;
+      }
+    }
+  }

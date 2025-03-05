@@ -1,4 +1,3 @@
+import runApp from './src/js/app.js';
 
-import makeHeader from './src/js/header.js';
-
-makeHeader()
+runApp();

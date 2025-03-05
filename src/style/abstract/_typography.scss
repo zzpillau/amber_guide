@@ -1,0 +1,41 @@
+@use "../abstract/placeholders" as *;
+@use "../abstract/mixins" as *;
+@use "../abstract/variables" as *;
+
+h1 {
+  @extend %font-main;
+  @include font($font-size-xlarge, 150%, 600, 0.17em);
+}
+
+h2, .action-large {
+  @extend %font-main;
+  @include font($font-size-large, 151%, 600, 0.16em);
+}
+
+h3, .action-medium {
+  @extend %font-main;
+  @include font($font-size-medium, 152%, 600, 0.08em);
+}
+
+h4, .action-small {
+  @extend %font-main;
+  @include font($font-size-small, 130%, 600, 0.046em);
+}
+
+p {
+  @extend %font-main;
+  @include font($font-size-medium, 148%);
+  text-transform: none;
+}
+
+.caption {
+  @extend %font-add;
+  @include font($font-size-large, 100%, 400, 00.05em);
+  text-transform: none;
+}
+
+.slider-text {
+  @extend %font-main;
+  @include font($font-size-huge, 100%, 600, 0.004em);
+}
+  

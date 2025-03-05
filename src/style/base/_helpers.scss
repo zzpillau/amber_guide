@@ -1,0 +1,27 @@
+@use "../abstract/variables" as *;
+@use "../layout/layout" as *;
+
+.main {
+  max-width: $max-width;
+  width: 100%;
+  margin: auto;
+}
+
+.wrapper {
+  max-width: $wrapper-width;
+  margin: auto;
+  @include flex;
+}
+
+.min-container {
+  @include flex;
+  flex-direction: column;
+  width: $min-container;
+  padding: $space-lg 0;
+  gap: $space-sm;
+  text-align: center;
+}
+
+.cursor-none *{
+  cursor: default;
+}

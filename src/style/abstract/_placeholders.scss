@@ -1,0 +1,13 @@
+@use "../base/fonts" as *;
+
+%transition {
+  transition: all .3s ease-out;
+}
+
+%font-main {
+  font-family: 'Montserrat', Verdana, sans-serif;
+}
+
+%font-add {
+  font-family: 'Pacifico', Verdana, sans-serif;
+}
