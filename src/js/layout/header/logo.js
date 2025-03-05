@@ -1,4 +1,4 @@
-import createElement from '../helpers/createElement.js';
+import createElement from '../../helpers/createElement.js';
 
 const renderLogo = () => {
   const a = createElement('a', ['logo'], { href: './index.html' });

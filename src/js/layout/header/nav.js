@@ -1,4 +1,4 @@
-import createElement from '../helpers/createElement.js';
+import createElement from '../../helpers/createElement.js';
 
 // { /* <nav class="header__navigation">
 //   <ul class="navigation layout-row action-small">
@@ -24,12 +24,10 @@ const renderNavigation = () => {
 
   const ul = createElement(ulTag.tagName, ulTag.classes);
 
-
-
   const aTag = {
     tagName: 'a',
     classes: ['nav-link', 'underline-hover'],
-  }
+  };
 
   const navTabs = [
     { tabName: 'О гиде', href: '#' },
@@ -38,16 +36,14 @@ const renderNavigation = () => {
     { tabName: 'Отзывы', href: '#' },
   ];
 
-  const aItems = navTabs.map(({ tabName, href }) => createElement(aTag.tagName, aTag.classes, {href}, tabName))
-
+  const aItems = navTabs.map(({ tabName, href }) => createElement(aTag.tagName, aTag.classes, { href }, tabName));
 
   const liTag = {
     tagName: 'li',
     classes: ['navigation-tab'],
   };
 
-  const liItems = aItems.map((a) => createElement(liTag.tagName, liTag.classes, {}, '', [a]))
-
+  const liItems = aItems.map((a) => createElement(liTag.tagName, liTag.classes, {}, '', [a]));
 
   liItems.forEach((li) => ul.append(li));
 

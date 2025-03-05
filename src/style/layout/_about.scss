@@ -40,6 +40,10 @@
 
 .about-header {
   gap: $space-md;
+
+   & .caption {
+    font-size: $font-size-huge;
+   }
 }
 
 .about-background {

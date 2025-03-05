@@ -7,8 +7,8 @@ const createElement = (tagName, classes = [], attrs = {}, text = '', children = 
 
   element.textContent = text;
 
-  children.forEach((child) => element.append(child))
-  
+  children.forEach((child) => element.append(child));
+
   return element;
 };
 

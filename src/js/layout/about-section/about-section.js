@@ -1,5 +1,5 @@
-import createElement from '../helpers/createElement.js';
-import createSection from '../helpers/createSection.js';
+import createElement from '../../helpers/createElement.js';
+import createSection from '../../helpers/createSection.js';
 import renderAboutInners from './about-inners.js';
 
 // <section class="hero">
@@ -9,7 +9,7 @@ const renderAboutSection = () => {
   const aboutSection = createSection();
   aboutSection.classList.add('about');
 
-  const inners = renderAboutInners()
+  const inners = renderAboutInners();
 
   const wrapper = createElement('div', ['wrapper', 'about__wrapper'], {}, '', [inners]);
 

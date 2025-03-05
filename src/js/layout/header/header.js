@@ -1,4 +1,4 @@
-import createElement from '../helpers/createElement.js';
+import createElement from '../../helpers/createElement.js';
 import renderLogo from './logo.js';
 import renderNavigation from './nav.js';
 import renderNavPhone from './phone.js';
