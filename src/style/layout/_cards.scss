@@ -1,0 +1,140 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+
+$card-w: 310px;
+$gap: $space-sm;
+$padding: $space-xs;
+$medium-bp: calc(($card-w * 4 + $gap * 3 + $padding * 2) - 1px);
+$small-bp: calc(($card-w * 2 + $gap + $padding * 2) - 1px);
+
+
+
+
+.cards {
+  padding-top: 0;
+
+
+
+}
+
+.grid-wrapper {
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  width: 100%;
+  gap: $space-lg;
+  justify-content: center;
+
+  @include media($medium-bp, calc($small-bp)) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-md;
+  }
+
+  @include media($small-bp) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $space-md;
+  }
+
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: auto;
+  transition: all 0.3s linear;
+  box-shadow: 2px 4px 15px 0px rgba(41, 38, 49, 0.2);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: $space-sm;
+
+  
+
+  &:hover .card-title{
+    color: $primary;
+    font-family: 'Pacifico', 'Times New Roman', serif;
+    letter-spacing: 1.4;
+  }
+
+  &:hover img {
+    transform: scale(1.07);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    transition: all 1s ease-in;
+  }
+
+  .img-container {
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+
+  .text-container {
+    position: relative;
+    padding: $space-md;
+    gap: $space-md;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: $static-white;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+
+
+      .card-text-content {
+        display: flex;
+        flex-direction: column;
+        gap: $space-sm;
+      }
+  }
+
+  .card-title {
+    line-height: 1.5; /* Высота строки */
+    min-height: 3em;
+    transition: all 1s ease-in-out;
+    white-space: pre-line;
+  }
+
+
+  
+}
+
+.cards-container {
+  gap: $space-lg;
+}
+
+
+.card-time {
+  position: relative;
+
+  &::before {
+    content: ""; /* Обязательно: контент должен быть задан, даже если он пустой */
+    position: absolute; /* Абсолютное позиционирование относительно .card */
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 1px; /* Пример высоты */
+    background-color: $primary; /* Пример цвета */
+    z-index: 1;
+  }
+}
+
+
+.card-footer {
+  width: 100%;
+  justify-content: space-between;
+}
+
+
+
+

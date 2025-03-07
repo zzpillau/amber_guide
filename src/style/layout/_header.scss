@@ -4,13 +4,14 @@
 @use "../abstract/mixins" as *;
 
 .header {
+  position: fixed;
+
   display: flex;
   max-width: $max-width;
   margin: auto;
 }
 
 .header__wrapper {
-  position: fixed;
   @include flex;
   justify-content: space-between;
   padding: $space-sm 0;
@@ -47,15 +48,60 @@
     display: none;
   }
 
+  $ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+
   .navigation-tab {
     padding: $space-sm $space-md;
-
 
     & a {
       color: $static-white;
     }
     
+    &:hover {
+      .underline-hover {
+        font-family: 'Pacifico', 'Times New Roman', serif;
+        letter-spacing: 1px;
 
+        &::after {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+
+    &:not(:hover) {
+      .underline-hover::after {
+        left: auto;
+        right: 0;
+        width: 0;
+      }
+    }
+
+    .underline-hover {
+      overflow: hidden;
+      position: relative;
+      transition: letter-spacing 0.4s ease-in-out;
+    
+  
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -9px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: #faf9f9;
+        transition: width 1s $ease-out-cubic, left 1s $ease-out-cubic;
+      }
+
+      // &:not(:hover)::after {
+      //   left: auto;
+      //   right: 0;
+      //   width: 0;
+      // }
+
+    
+    }
 
     &:hover:not(.nav-active) {
       cursor: pointer;
@@ -91,39 +137,6 @@
 
 // hover
 
-$ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
 
 
 
-.underline-hover {
-  overflow: hidden;
-  position: relative;
-  transition: letter-spacing 0.4s ease-in-out;
-
-  &:hover {
-    font-family: 'Pacifico', 'Times New Roman', serif;
-    letter-spacing: 1px;
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -9px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background-color: #faf9f9;
-    transition: width 1s $ease-out-cubic, left 1s $ease-out-cubic;
-  }
-
-  &:hover::after {
-    width: 100%;
-    left: 0;
-  }
-
-  &:not(:hover)::after {
-    left: auto;
-    right: 0;
-    width: 0;
-  }
-}

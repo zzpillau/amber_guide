@@ -7,11 +7,15 @@
 @use "base/base";
 @use "base/helpers";
 
+@use "components/button-prime";
+
 @use "layout/layout";
 @use "layout/header";
 @use "layout/section";
 @use "layout/hero";
 @use "layout/about";
 @use "layout/cards";
+
+
 
 @use "draft"
