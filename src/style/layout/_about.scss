@@ -28,7 +28,7 @@
   .inner {
     text-align: start;
     gap: $space-lg;
-    align-items: start;
+    align-items: center;
     width: 100%;
   }
 
@@ -47,7 +47,8 @@
 }
 
 .about-background {
-  border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   width: 50%;
   background: url("../assets/img/portrait-about.jpg") no-repeat center/cover;
   height: 528px;

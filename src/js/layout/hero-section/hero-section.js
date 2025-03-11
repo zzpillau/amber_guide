@@ -5,7 +5,7 @@ import createSection from '../../helpers/createSection.js';
 // <div class="wrapper hero__wrapper"> */}
 
 const renderHeroSection = () => {
-  const heroSection = createSection();
+  const heroSection = createSection('hero-section');
   heroSection.classList.add('hero');
 
   const wrapper = createElement('div', ['wrapper', 'hero__wrapper']);

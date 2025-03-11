@@ -1,0 +1,16 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+
+.transport-background {
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 50%;
+  background: url("../assets/img/renault-scenic.webp") no-repeat center/cover;
+  height: 528px;
+
+  @include media(700px, 'small') {
+    width: 100%;
+  }
+  z-index: 1000;
+}
+

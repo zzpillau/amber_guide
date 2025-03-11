@@ -43,8 +43,9 @@ $small-bp: calc(($card-w * 2 + $gap + $padding * 2) - 1px);
   width: 100%;
   height: auto;
   transition: all 0.3s linear;
-  box-shadow: 2px 4px 15px 0px rgba(41, 38, 49, 0.2);
-  border-radius: 20px;
+  box-shadow: 6px 6px 15px 0px $primary-10;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -55,7 +56,7 @@ $small-bp: calc(($card-w * 2 + $gap + $padding * 2) - 1px);
   &:hover .card-title{
     color: $primary;
     font-family: 'Pacifico', 'Times New Roman', serif;
-    letter-spacing: 1.4;
+    letter-spacing: 1px;
   }
 
   &:hover img {
@@ -66,8 +67,8 @@ $small-bp: calc(($card-w * 2 + $gap + $padding * 2) - 1px);
     width: 100%;
     height: auto;
     display: block;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
+    // border-top-right-radius: 20px;
+    // border-bottom-left-radius: 20px;
     transition: all 1s ease-in;
   }
 
@@ -98,12 +99,8 @@ $small-bp: calc(($card-w * 2 + $gap + $padding * 2) - 1px);
       }
   }
 
-  .card-title {
-    line-height: 1.5; /* Высота строки */
-    min-height: 3em;
-    transition: all 1s ease-in-out;
-    white-space: pre-line;
-  }
+
+  
 
 
   
@@ -137,4 +134,9 @@ $small-bp: calc(($card-w * 2 + $gap + $padding * 2) - 1px);
 
 
 
+h2 {
+  &.cards-section-title {
+    padding: 25px 0 0;
+  }
 
+}

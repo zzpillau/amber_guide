@@ -30,10 +30,10 @@ const renderNavigation = () => {
   };
 
   const navTabs = [
-    { tabName: 'О гиде', href: '#' },
-    { tabName: 'Экскурсии', href: '#' },
-    { tabName: 'Транспорт', href: '#' },
-    { tabName: 'Отзывы', href: '#' },
+    { tabName: 'О гиде', href: '#about-section' },
+    { tabName: 'Экскурсии', href: '#cards-section' },
+    { tabName: 'Транспорт', href: '#transport-section' },
+    { tabName: 'Отзывы', href: '#feedback-section' },
   ];
 
   const aItems = navTabs.map(({ tabName, href }) => createElement(aTag.tagName, aTag.classes, { href }, tabName));

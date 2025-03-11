@@ -6,7 +6,7 @@ import renderAboutInners from './about-inners.js';
 //   <div class="wrapper hero__wrapper">
 
 const renderAboutSection = () => {
-  const aboutSection = createSection();
+  const aboutSection = createSection('about-section');
   aboutSection.classList.add('about');
 
   const inners = renderAboutInners();

@@ -7,136 +7,138 @@
   position: fixed;
 
   display: flex;
-  max-width: $max-width;
+  width: $max-width;
   margin: auto;
-}
-
-.header__wrapper {
-  @include flex;
-  justify-content: space-between;
-  padding: $space-sm 0;
-  width: 100%;
-  margin: 0 $space-lg;
-
-}
-
-.logo {
-  @include flex;
-  padding: $space-xs 0;
-  gap: $space-xs;
-
-  @include media('medium', 'small') {
-    cursor: default;
-  }
-}
-
-.logo {
+  z-index: 2000;
   color: $static-white;
+
+  .header__wrapper {
+    @include flex;
+    justify-content: space-between;
+    padding: $space-sm 0;
+    width: 100%;
+    margin: 0 $space-lg;
   
-  .logo-image {
-    height: $font-size-xlarge;
-  }
-}
 
-.navigation {
-  gap: $space-xs;
-
-  color: $static-white;
-
-
-  @include media('medium', 'small') {
-    display: none;
-  }
-
-  $ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
-
-  .navigation-tab {
-    padding: $space-sm $space-md;
-
-    & a {
+    .logo {
+      @include flex;
+      padding: $space-xs 0;
+      gap: $space-xs;
       color: $static-white;
-    }
     
-    &:hover {
-      .underline-hover {
-        font-family: 'Pacifico', 'Times New Roman', serif;
-        letter-spacing: 1px;
+      @include media('medium', 'small') {
+        cursor: default;
+      }
+  
+      .logo-image {
+        height: $font-size-xlarge;
+      }
+    }
 
-        &::after {
-          width: 100%;
-          left: 0;
+
+    .navigation {
+      gap: $space-xs;
+    
+      @include media('medium', 'small') {
+        display: none;
+      }
+    
+      $ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+    
+      .navigation-tab {
+        padding: $space-sm $space-md;
+    
+        & a {
+          color: $static-white;
+        }
+        
+        &:hover {
+          .underline-hover {
+            font-family: 'Pacifico', 'Times New Roman', serif;
+            letter-spacing: 1px;
+    
+            &::after {
+              width: 100%;
+              left: 0;
+            }
+          }
+        }
+    
+        &:not(:hover) {
+          .underline-hover::after {
+            left: auto;
+            right: 0;
+            width: 0;
+          }
+        }
+    
+        .underline-hover {
+          overflow: hidden;
+          position: relative;
+          transition: letter-spacing 0.4s ease-in-out;
+        
+      
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: -9px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #faf9f9;
+            transition: width 1s $ease-out-cubic, left 1s $ease-out-cubic;
+          }
+    
+       
+        }
+    
+        &:hover:not(.nav-active) {
+          cursor: pointer;
+    
+          @include disable-hover-on-mobile {
+            background-color: $static-white;
+            color: $dark;
+          };
+        }
+    
+        &.nav-active {
+          background-color: $primary-10;
+          // border-radius: $space-sm;
+          cursor: default;
         }
       }
     }
 
-    &:not(:hover) {
-      .underline-hover::after {
-        left: auto;
-        right: 0;
-        width: 0;
-      }
-    }
-
-    .underline-hover {
-      overflow: hidden;
-      position: relative;
-      transition: letter-spacing 0.4s ease-in-out;
+    .nav-pnone {
+      gap: $space-sm;
     
-  
+      .phone-link {
+      color: $static-white;
+      }
+    
+      &:hover {
+        transition: all 0.3s ease-in-out;
+        transform: scale(1.05);
+      }
+    
+    }
+    
+    
+
+    
+  }
+
+  &.scrolled {
+    box-shadow: 2px 6px 5px $primary-10;
+    
+    .underline-hover{
       &::after {
-        content: '';
-        position: absolute;
-        bottom: -9px;
-        left: 0;
-        width: 0;
-        height: 1px;
-        background-color: #faf9f9;
-        transition: width 1s $ease-out-cubic, left 1s $ease-out-cubic;
-      }
-
-      // &:not(:hover)::after {
-      //   left: auto;
-      //   right: 0;
-      //   width: 0;
-      // }
-
-    
-    }
-
-    &:hover:not(.nav-active) {
-      cursor: pointer;
-
-      @include disable-hover-on-mobile {
-        background-color: $static-white;
-        color: $dark;
-      };
-    }
-
-    &.nav-active {
-      background-color: $primary-10;
-      // border-radius: $space-sm;
-      cursor: default;
+      background-color: $primary !important; // Подчёркивание становится тёмным
     }
   }
+  
+  }
+  
+ 
 }
-
-.nav-pnone {
-  gap: $space-sm;
-
-  .phone-link {
-  color: $static-white;
-  }
-
-  &:hover {
-    transition: all 0.3s ease-in-out;
-    transform: scale(1.05);
-  }
-
-}
-
-
-// hover
-
-
-
 
