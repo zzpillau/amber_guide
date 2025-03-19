@@ -7,13 +7,8 @@ $padding: $space-xs;
 $medium-bp: calc(($card-w * 4 + $gap * 3 + $padding * 2) - 1px);
 $small-bp: calc(($card-w * 2 + $gap + $padding * 2) - 1px);
 
-
-
-
 .cards {
   padding-top: 0;
-
-
 
 }
 
@@ -44,20 +39,28 @@ $small-bp: calc(($card-w * 2 + $gap + $padding * 2) - 1px);
   height: auto;
   transition: all 0.3s linear;
   box-shadow: 6px 6px 15px 0px $primary-10;
-  border-top-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-radius: 30px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   gap: $space-sm;
+  justify-content: space-between;
 
   
 
-  &:hover .card-title{
-    color: $primary;
-    font-family: 'Pacifico', 'Times New Roman', serif;
-    letter-spacing: 1px;
+
+  &:hover {
+    box-shadow: 8px 8px 20px 0px $primary-40;
+
+
+    .card-title{
+      color: $primary;
+      // font-family: 'Pacifico', 'Times New Roman', serif;
+      // letter-spacing: 0.1em;
+    }
+  
   }
+    
 
   &:hover img {
     transform: scale(1.07);
@@ -76,6 +79,9 @@ $small-bp: calc(($card-w * 2 + $gap + $padding * 2) - 1px);
     display: flex;
     align-items: flex-start;
     overflow: hidden;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+
   }
 
   .text-container {
@@ -83,33 +89,25 @@ $small-bp: calc(($card-w * 2 + $gap + $padding * 2) - 1px);
     padding: $space-md;
     gap: $space-md;
     display: flex;
-    align-items: start;
     flex-direction: column;
-    justify-content: flex-start;
     background: $static-white;
     width: 100%;
-    height: auto;
     border-radius: 20px;
 
 
       .card-text-content {
         display: flex;
         flex-direction: column;
+        height: 108px;
+        justify-content: space-between;
         gap: $space-sm;
       }
   }
-
-
-  
-
-
-  
 }
 
 .cards-container {
   gap: $space-lg;
 }
-
 
 .card-time {
   position: relative;
@@ -126,13 +124,10 @@ $small-bp: calc(($card-w * 2 + $gap + $padding * 2) - 1px);
   }
 }
 
-
 .card-footer {
   width: 100%;
   justify-content: space-between;
 }
-
-
 
 h2 {
   &.cards-section-title {

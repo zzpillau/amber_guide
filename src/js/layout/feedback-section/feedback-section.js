@@ -1,8 +1,7 @@
 import createElement from '../../helpers/createElement.js';
 import createSection from '../../helpers/createSection.js';
-import renderFeedbackInners from './feedback-html.js'
+import renderFeedbackInners from './feedback-html.js';
 
-import initSlider from './slider.js';
 // {/* <section class="hero">
 // <div class="wrapper hero__wrapper"> */}
 
@@ -22,9 +21,7 @@ const renderFeedbackSection = () => {
   //      <button class="arrow arrow-right button" id="nextButton">NEXT</button>
   //    </div>`
 
-
   feedbackSection.append(wrapper);
-
 };
 
 export default renderFeedbackSection;

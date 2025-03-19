@@ -2,8 +2,7 @@
 @use "../abstract/mixins" as *;
 
 .transport-background {
-  border-top-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-radius: 20px;
   width: 50%;
   background: url("../assets/img/renault-scenic.webp") no-repeat center/cover;
   height: 528px;
@@ -12,5 +11,18 @@
     width: 100%;
   }
   z-index: 1000;
+}
+
+.transport__wrapper {
+  .layout-row {
+  // background-color: $static-white;
+  // border-radius: 20px;
+  width: 100%;
+  position: relative;
+
+    @include media(700px, 'small') {
+      flex-direction: column;
+    }
+  }
 }
 

@@ -6,8 +6,11 @@
 @use "base/fonts";
 @use "base/base";
 @use "base/helpers";
+@use "base/spaces";
+@use "base/masks";
 
 @use "components/button-prime";
+@use "components/modal";
 
 @use "layout/layout";
 @use "layout/header";
@@ -17,8 +20,7 @@
 @use "layout/cards";
 @use "layout/transport";
 @use "layout/slider";
-
-
+@use "layout/footer";
 
 
 @use "draft"

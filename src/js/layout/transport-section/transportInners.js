@@ -1,4 +1,4 @@
-import createElement from "../../helpers/createElement.js";
+import createElement from '../../helpers/createElement.js';
 
 const renderTransportInners = () => {
   const pCaption = {
@@ -17,7 +17,7 @@ const renderTransportInners = () => {
 
   const pText = {
     tag: 'p',
-    classes: [],
+    classes: ['taj'],
     text: ' В нашем распоряжении комфортабельный, просторный минивэн с климат контролем, бутилированная вода для всех участников, пледы, дождевики, бинокль, все это поможет сделать ваш отдых комфортным.👨‍👩‍👧‍👦В машине только вы и ваши близкие.',
     render() { return createElement(this.tag, this.classes, {}, this.text); },
   };
@@ -38,7 +38,6 @@ const renderTransportInners = () => {
   ]);
 
   return divContainer;
-
-}
+};
 
 export default renderTransportInners;

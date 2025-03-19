@@ -22,13 +22,13 @@ const onScrollHeader = () => {
 
     // Применение стилей
     header.style.backgroundColor = `rgba(255, 255, 255, ${bgProgress})`;
-    
-    const textColor = scrollY <= textStartPoint 
-      ? whiteColor 
+
+    const textColor = scrollY <= textStartPoint
+      ? whiteColor
       : interpolateColor(whiteColor, targetColor, textProgress);
-    
+
     header.style.color = textColor;
-    headerText.forEach(element => element.style.color = textColor);
+    headerText.forEach((element) => element.style.color = textColor);
   });
 };
 
@@ -39,6 +39,5 @@ const interpolateColor = (color1, color2, factor) => {
   const result = c1.map((channel, index) => Math.round(channel + factor * (c2[index] - channel))); // Интерполяция
   return `rgba(${result.join(', ')})`; // Возвращаем цвет в формате "rgba(R, G, B, A)"
 };
-
 
 export default onScrollHeader;

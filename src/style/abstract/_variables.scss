@@ -2,8 +2,9 @@
 $static-white: rgb(255, 255, 255);
 $static-white-40: rgb(255, 255, 255, 0.4);
 $static-white-20: rgb(255, 255, 255, 0.2);
-$primary: rgb(57, 160, 245);
+$primary: #39a0f5;
 $primary-10: rgb(45, 114, 243, 0.1);
+$primary-40: rgb(45, 114, 243, 0.4);
 $content-background: #ECF3F8;
 $dark: rgb(24, 28, 41);
 $tag-green: #06A44F;
@@ -23,10 +24,12 @@ $space-xs: 8px;
 $space-sm: 12px;
 $space-md: 20px;
 $space-lg: 60px;
+$space-huge: 120px;
 
 // Max-width
 $max-width: 1440px !default;
 $wrapper-width: 1276px;
 $min-container: 426px;
 
-$ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1)
+$ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+

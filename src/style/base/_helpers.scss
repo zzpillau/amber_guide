@@ -5,6 +5,7 @@
   max-width: $max-width;
   width: 100%;
   margin: auto;
+  background-color: $static-white;
 }
 
 .wrapper {
@@ -17,7 +18,7 @@
   @include flex;
   flex-direction: column;
   width: $min-container;
-  padding: $space-lg 0;
+  padding: $space-lg $space-md;
   gap: $space-sm;
   text-align: center;
 }

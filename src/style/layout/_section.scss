@@ -8,15 +8,33 @@
 .section {
   scroll-margin-top: 72px;
   width: 100%;
-  // @extend %background-gradient;
   padding: $space-lg $space-xs;
+  background-color: $static-white;
 
   &.hero{
     background: 
       url('../../src/assets/img/hero-background.jpg') no-repeat center / cover,
       $primary;
-    // border-bottom-left-radius: 20px;
-    // border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     height: 100vh;
+    margin-bottom: $space-lg;
   }
+
+  &.about {
+  padding:  $space-lg $space-xs $space-lg;
+  }
+
+  &.transport {
+    padding: $space-lg $space-xs $space-huge;
+  }
+
+  &.feedback {
+    background: 
+    url('../../src/assets/img/seagull.jpg') no-repeat center / cover;
+    background-color: $static-white;
+    border-radius: 20px;
+  }
+
+
 }

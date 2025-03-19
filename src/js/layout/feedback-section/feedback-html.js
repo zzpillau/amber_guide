@@ -1,4 +1,4 @@
-import createElement from "../../helpers/createElement.js";
+import createElement from '../../helpers/createElement.js';
 
 // wrapper.innerHTML = `
 // <h3 class="slider-section-header">Отзывы</h3>
@@ -12,50 +12,48 @@ import createElement from "../../helpers/createElement.js";
 
 const renderFeedbackInners = () => {
   const h3 = {
-    tag: 'h3',
-    classes: ['slider-section-header'],
+    tag: 'h2',
+    classes: ['slider-section-header', 'pb20'],
     text: 'Отзывы',
-    render() {return createElement(this.tag, this.classes, {}, this.text)}
-  }
+    render() { return createElement(this.tag, this.classes, {}, this.text); },
+  };
 
   const slidesContainer = {
     tag: 'div',
     classes: ['slides-container'],
     attrs: {
-      id: 'slides-container'
+      id: 'slides-container',
     },
-    render() {return createElement(this.tag, this.classes)}
-  }
+    render() { return createElement(this.tag, this.classes); },
+  };
 
   const prevButton = {
     tag: 'button',
-    classes: ['button'],
+    classes: ['slide-button'],
     text: '←',
     attrs: {
       id: 'prev-button',
     },
-    render() {return createElement(this.tag, this.classes, this.attrs, this.text)}
-  }
+    render() { return createElement(this.tag, this.classes, this.attrs, this.text); },
+  };
 
   const nextButton = {
     tag: 'button',
-    classes: ['button'],
+    classes: ['slide-button'],
     text: '→',
     attrs: {
       id: 'next-button',
     },
-    render() {return createElement(this.tag, this.classes, this.attrs, this.text)}
-  }
-
+    render() { return createElement(this.tag, this.classes, this.attrs, this.text); },
+  };
 
   const sliderСontrols = {
     tag: 'div',
     classes: ['slider-controls'],
-    render() {return createElement(this.tag, this.classes, {}, '', [prevButton.render(), nextButton.render()])}
-  } 
+    render() { return createElement(this.tag, this.classes, {}, '', [prevButton.render(), nextButton.render()]); },
+  };
 
   return [h3.render(), slidesContainer.render(), sliderСontrols.render()];
-
-}
+};
 
 export default renderFeedbackInners;

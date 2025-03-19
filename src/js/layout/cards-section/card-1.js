@@ -22,16 +22,15 @@ const createCardElement = (cardData) => {
   const titleP = createElement('h3', ['card-title'], {}, title);
   const descP = createElement('p', ['card-desc'], {}, description);
 
-
   const contentDiv = createElement('div', ['card-text-content'], {}, '', [titleP, descP]);
 
   const timeP = createElement('p', ['card-time'], {}, time);
 
-  const cardFooter = createElement('div', ['card-footer', 'layout-row'], {}, '', [timeP, buttonPrime()])
+  const cardFooter = createElement('div', ['card-footer', 'layout-row'], {}, '', [timeP, buttonPrime()]);
 
   const textDiv = createElement('div', ['text-container'], {}, '', [contentDiv, cardFooter]);
 
-  const root = createElement('div', ['card', 'layout-column'], { id }, '', [imgDiv, textDiv]);
+  const root = createElement('div', ['card', 'layout-column'], { 'data-id': id }, '', [imgDiv, textDiv]);
 
   return root;
 };

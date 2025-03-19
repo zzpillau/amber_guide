@@ -4,7 +4,7 @@
 .about__wrapper {
   .layout-row {
   // background-color: $static-white;
-  border-radius: 20px;
+  // border-radius: 20px;
   width: 100%;
   position: relative;
 
@@ -26,7 +26,7 @@
   }
 
   .inner {
-    text-align: start;
+    // text-align: center;
     gap: $space-lg;
     align-items: center;
     width: 100%;
@@ -47,8 +47,7 @@
 }
 
 .about-background {
-  border-top-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-radius: 20px;
   width: 50%;
   background: url("../assets/img/portrait-about.jpg") no-repeat center/cover;
   height: 528px;
@@ -71,4 +70,8 @@
   object-position: center center;
   display: block;
   z-index: 500;
+}
+
+.about-text {
+  text-align: justify;
 }

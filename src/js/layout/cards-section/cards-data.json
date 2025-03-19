@@ -4,7 +4,7 @@
     "title": "Обзорная по Калининграду",
     "description": " Вcе главные дocтoпримечательности Калининграда и не только",
     "time": "4 часа",
-    "imgPath": "./assets/img/kalik.jpg",
+    "imgPath": "../src/assets/img/kalik.jpg",
     "alt": "Вид города Калининграда с высоты"
   },
   {
@@ -12,7 +12,7 @@
     "title": "Замки, кирхи и усадьбы Восточной Пруссии",
     "description": "История и современность сплетаются вместе в этих древних стенах",
     "time": "8 часов",
-    "imgPath": "./assets/img/castles.jpg",
+    "imgPath": "../src/assets/img/castles.jpg",
     "alt": "Стариннная Прусская усадьба"
 
   },
@@ -21,7 +21,7 @@
     "title": "Куршская коса,\nЗеленоградск и Шаакен",
     "description": "Неповторимость песчаных дюн, очарование европейского городка",
     "time": "9 часов",
-    "imgPath": "./assets/img/kurshs.jpg",
+    "imgPath": "../src/assets/img/kurshs.jpg",
     "alt": "Берег Куршской косы"
   }
 ]

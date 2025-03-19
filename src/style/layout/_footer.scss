@@ -1,0 +1,75 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+@use "../abstract/placeholders" as *;
+@use "../layout/layout" as *;
+
+
+
+.footer {
+  position: relative;
+  background-color: $static-white;
+  width: 100%;
+
+  .footer-content {
+    gap: $space-lg;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .footer__wrapper {
+    display: flex;
+    position: relative;
+    height: 50vh;
+    z-index: 2;
+  
+  
+    .grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 40px;
+      width: 100%;
+      height: 100%;
+   
+    }
+  
+    .social-link {
+      position: relative;
+  
+      .social-icon{
+        width: 24px;
+        position: absolute;
+        bottom: 0;
+        left: -30px;
+      }
+    
+    }
+  }
+  
+
+  .logo {
+    @include flex;
+    padding: $space-xs 0;
+    gap: $space-xs;
+    color: $dark;
+  
+    @include media('medium', 'small') {
+      cursor: default;
+    }
+
+    .logo-image {
+      height: $font-size-xlarge;
+    }
+  }
+}
+
+/* Стиль для волны */
+.footer-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
