@@ -9,10 +9,12 @@ import renderFeedbackSection from './layout/feedback-section/feedback-section.js
 import initSlider from './layout/feedback-section/slider.js';
 import renderFooter from './layout/footer/footer.js';
 import modal from './layout/cards-section/modal/modal.js';
+import buildBurgerMenu from './layout/header/burger.js';
 
 const runApp = () => {
   renderInitLayout();
   renderHeader();
+  buildBurgerMenu();
   renderHeroSection();
   renderAboutSection();
   renderCardsSection();

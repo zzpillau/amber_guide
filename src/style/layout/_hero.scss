@@ -1,0 +1,35 @@
+@use "../abstract/mixins" as *;
+@use "../abstract/variables" as *;
+
+
+.title-hero-container{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: $space-md $space-lg $space-lg;
+  width: 100%;
+
+  color: $static-white;
+  overflow: visible;
+  background-color: $overlay;
+
+  border-radius: 20px;
+  box-shadow: 
+  0px 10px 20px $primary-40, /* Нижняя тень - цвет primary-40 */
+  0px -30px 60px rgba($overlay, 0.8), /* Верхняя тень - цвет overlay с мягким эффектом */
+  0px -10px 30px rgba(0, 0, 0, 0.3); /* Добавление дополнительного естественного размытия */
+
+  gap: $space-md;
+
+
+
+  .header-title {
+    font-family: 'Brigantina';
+    @include font($font-size-huge, 100%, 400, 00.05em);
+    text-transform: none;
+  }
+
+
+
+}

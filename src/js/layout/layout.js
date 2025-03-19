@@ -6,6 +6,7 @@ const renderInitLayout = () => {
   elements.forEach((tagName) => {
     const element = document.createElement(tagName);
     element.classList.add(tagName);
+    element.setAttribute('id', tagName)
     body.append(element);
   });
 };
