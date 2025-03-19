@@ -53,7 +53,7 @@
     gap: $space-xs;
     color: $dark;
   
-    @include media('medium', 'small') {
+    @include media('medium') {
       cursor: default;
     }
 

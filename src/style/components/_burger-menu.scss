@@ -47,7 +47,7 @@ body.noscroll {
 .popup {
   display: none;
 
-    @include media(1160px, 'small') {
+    @include media(1160px) {
     display: flex;
     position: fixed;
     // top: 64px;

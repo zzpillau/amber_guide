@@ -27,7 +27,7 @@
       gap: $space-xs;
       color: $static-white;
     
-      @include media('medium', 'small') {
+      @include media('medium') {
         cursor: default;
       }
   

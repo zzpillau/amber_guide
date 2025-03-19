@@ -8,7 +8,7 @@
   width: 100%;
   position: relative;
 
-    @include media(700px, 'small') {
+    @include media(700px) {
       flex-direction: column;
     }
   }
@@ -19,7 +19,7 @@
   padding: 0 $space-lg;
   height: 100%;
 
-  @include media(700px, 'small') {
+  @include media(700px) {
     $p: calc(60px + 40 * ((100vw - 700px) / 320));
     width: 100%;
     padding: 0 $p;
@@ -52,7 +52,7 @@
   background: url("../assets/img/portrait-about.jpg") no-repeat center/cover;
   height: 528px;
 
-  @include media('medium', 'small') {
+  @include media('medium') {
     display: none;
   }
   z-index: 1000;
