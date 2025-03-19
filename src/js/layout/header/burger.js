@@ -11,7 +11,7 @@ const addBurgerHTML = () => {
 
   const popupTemplate = `<div class="popup" id="popup"></div>`;
 
-    const burgerContainer = createElement('div');
+    const burgerContainer = createElement('div', ['burger-container']);
     burgerContainer.innerHTML = burgerTemplate;
 
     const popupContainer = createElement('div', ['popup'], {id: 'popup'})

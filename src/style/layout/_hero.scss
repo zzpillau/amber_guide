@@ -22,14 +22,10 @@
 
   gap: $space-md;
 
-
-
   .header-title {
     font-family: 'Brigantina';
     @include font($font-size-huge, 100%, 400, 00.05em);
-    text-transform: none;
+    text-align: center;
   }
-
-
 
 }
